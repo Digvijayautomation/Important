@@ -39,7 +39,8 @@ public class FindElements_List {
 
 		System.out.println(bakeries.size());
 
-		for (WebElement webElement : bakeries) {
+		for (WebElement webElement : bakeries) 
+		{
 			String name = webElement.getText();
 			System.out.println(name);
 		}
