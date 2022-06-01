@@ -23,14 +23,15 @@ public class mobile_browser {
 		this.driver = new ChromeDriver();
 		
 	
-		DevTools devTools = new DevTools(null, null);
-		devTools.createSession();
-		// iPhone 11 Pro dimensions
-		devTools.send(Emulation.setDeviceMetricsOverride(375,
-		                                                 812,
-		                                                 50,
-		                                                 true, null, null, null, null, null, null, null, null
-		                                               ));
+		try (DevTools devTools = new DevTools(null, null)) {
+			devTools.createSession();
+			// iPhone 11 Pro dimensions
+			devTools.send(Emulation.setDeviceMetricsOverride(375,
+			                                                 812,
+			                                                 50,
+			                                                 true, null, null, null, null, null, null, null, null
+			                                               ));
+		}
 		driver.get("https://selenium.dev/");
 		driver.quit();
 	  }
