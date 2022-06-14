@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
+// open three tabs and get title of 2nd tab
 public class get_text_from_2nd_tab
 {
 	static WebDriver driver;
