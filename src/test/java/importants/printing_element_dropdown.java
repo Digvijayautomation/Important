@@ -29,22 +29,29 @@ public class printing_element_dropdown {
 		Thread.sleep(1000);
 		WebElement element=driver.findElement(By.id("adminType"));
 		
+		//String all the element of dropdown
 		Select dropdown=new Select(element);
 		
+		
+		// String it into arrylist
 		ArrayList<String> dropdownlist= new ArrayList<String>();
 		
 		
+		// Using for each for getting text from arrylist
 		for(WebElement e:dropdown.getOptions())
 		{
 			dropdownlist.add(e.getText());
 		}
 		
+		// Sorting the arrylist
 		ArrayList<String> templist=dropdownlist;
 		Collections.sort(templist);
 		
-		
+		// Printing the sorted array
 		System.out.println(templist);
 		
+		
+		// Printing the sorted list
 		for(String list:templist)
 		{
 			System.out.println(list);
