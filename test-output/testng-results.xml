@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-15T16:46:08 IST" name="Default suite" finished-at="2022-06-15T16:46:08 IST" duration-ms="10">
+  <suite started-at="2022-06-25T12:20:09 IST" name="Default suite" finished-at="2022-06-25T12:20:27 IST" duration-ms="17352">
     <groups>
     </groups>
-    <test started-at="2022-06-15T16:46:08 IST" name="Default test" finished-at="2022-06-15T16:46:08 IST" duration-ms="10">
+    <test started-at="2022-06-25T12:20:09 IST" name="Default test" finished-at="2022-06-25T12:20:27 IST" duration-ms="17352">
+      <class name="importants.Change_browser_dimensions">
+        <test-method signature="Browser()[pri:0, instance:importants.Change_browser_dimensions@1a18644]" started-at="2022-06-25T12:20:09 IST" name="Browser" finished-at="2022-06-25T12:20:27 IST" duration-ms="17289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+      </class> <!-- importants.Change_browser_dimensions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

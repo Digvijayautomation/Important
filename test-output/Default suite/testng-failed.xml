@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="importants.mobile_browser">
+      <class name="importants.Iframes">
         <methods>
-          <include name="userAgentTest"/>
+          <include name="checking_frames"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- importants.mobile_browser -->
+      </class> <!-- importants.Iframes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

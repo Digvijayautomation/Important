@@ -14,8 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class FindElements_List {
 
 
-	public WebDriver driver;
-
+	static WebDriver driver;
 
 	@BeforeTest
 	public void Browser() throws InterruptedException {
@@ -23,12 +22,11 @@ public class FindElements_List {
 		WebDriverManager.chromedriver().setup();
 		this.driver = new ChromeDriver();
 		driver.manage().window().maximize();
-
-
 		driver.get("https://www.justdial.com/Bangalore/Bakeries");
 		Thread.sleep(500);
 
 
+		
 	}
 
 
