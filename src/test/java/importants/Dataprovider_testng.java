@@ -3,6 +3,7 @@ package importants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -16,7 +17,7 @@ static WebDriver driver;
 	
 
 	@BeforeMethod
-	public static void test1() {
+	public static void test() {
 		
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
@@ -36,6 +37,8 @@ static WebDriver driver;
 		
 		driver.findElement(By.id("btnLogin")).click();
 		Thread.sleep(1000);
+		
+		Assert.assertTrue(driver.findElement(By.id("welcome")).isDisplayed());
 		driver.quit();
 		
 		

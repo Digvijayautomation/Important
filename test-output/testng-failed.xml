@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="importants.Dataprovider_testng">
+      <class name="importants.waits">
         <methods>
-          <include name="login" invocation-numbers="1"/>
-          <include name="test1"/>
+          <include name="test"/>
+          <include name="Fluetwait"/>
         </methods>
-      </class> <!-- importants.Dataprovider_testng -->
+      </class> <!-- importants.waits -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

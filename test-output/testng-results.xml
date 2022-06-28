@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-28T16:01:38 IST" name="Default suite" finished-at="2022-06-28T16:01:59 IST" duration-ms="21235">
+  <suite started-at="2022-06-28T18:11:54 IST" name="Default suite" finished-at="2022-06-28T18:12:29 IST" duration-ms="35020">
     <groups>
     </groups>
-    <test started-at="2022-06-28T16:01:38 IST" name="Default test" finished-at="2022-06-28T16:01:59 IST" duration-ms="21235">
-      <class name="importants.Dataprovider_testng">
-        <test-method is-config="true" signature="test1()[pri:0, instance:importants.Dataprovider_testng@342c38f8]" started-at="2022-06-28T16:01:38 IST" name="test1" finished-at="2022-06-28T16:01:40 IST" duration-ms="2167" status="PASS">
+    <test started-at="2022-06-28T18:11:54 IST" name="Default test" finished-at="2022-06-28T18:12:29 IST" duration-ms="35020">
+      <class name="importants.waits">
+        <test-method is-config="true" signature="test()[pri:0, instance:importants.waits@25fb8912]" started-at="2022-06-28T18:11:54 IST" name="test" finished-at="2022-06-28T18:11:56 IST" duration-ms="2484" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:importants.Dataprovider_testng@342c38f8]" started-at="2022-06-28T16:01:40 IST" name="login" data-provider="data_for_login_test" finished-at="2022-06-28T16:01:49 IST" duration-ms="8820" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- test -->
+        <test-method signature="Fluetwait()[pri:2, instance:importants.waits@25fb8912]" started-at="2022-06-28T18:11:56 IST" name="Fluetwait" finished-at="2022-06-28T18:12:29 IST" duration-ms="32500" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="test1()[pri:0, instance:importants.Dataprovider_testng@342c38f8]" started-at="2022-06-28T16:01:49 IST" name="test1" finished-at="2022-06-28T16:01:50 IST" duration-ms="1031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:importants.Dataprovider_testng@342c38f8]" started-at="2022-06-28T16:01:50 IST" name="login" data-provider="data_for_login_test" finished-at="2022-06-28T16:01:59 IST" duration-ms="9180" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[adminxyc]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hshdjs]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- importants.Dataprovider_testng -->
+        </test-method> <!-- Fluetwait -->
+      </class> <!-- importants.waits -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
