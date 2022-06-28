@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="importants.Iframes">
+      <class name="importants.Dataprovider_testng">
         <methods>
-          <include name="checking_frames"/>
+          <include name="login" invocation-numbers="1"/>
           <include name="test1"/>
         </methods>
-      </class> <!-- importants.Iframes -->
+      </class> <!-- importants.Dataprovider_testng -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
