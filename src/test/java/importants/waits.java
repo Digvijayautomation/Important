@@ -34,7 +34,7 @@ public class waits {
 
 
 	@SuppressWarnings("deprecation")
-	//@Test(priority=0)
+	@Test(priority=0)
 	public static void Implicit_Wait()  // Implicit wait applied for all the elements/events automatically after declaring
 	{
 
@@ -46,7 +46,7 @@ public class waits {
 		driver.quit();
 	}
 
-	//@Test(priority=1)
+	@Test(priority=1)
 	public static void Explicit_Wait()
 	{	
 		driver.get("https://www.rentomojo.com/");
