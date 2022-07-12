@@ -38,21 +38,29 @@ public class monkey_testing {
 	System.out.println("Total Links in Footer are "+footer_count);
 	
 	
+	
 
 	for (int i=0; i<footer_count;i++)
 	{
-	  int random_index=(int) Math.floor(Math.random()*footer_count);
+	 // create random number between 1 to footer_count
+		int random_index=(int) Math.floor(Math.random()*footer_count);
 	 
 	  WebElement e=footerList.get(random_index);
 	  
 	  System.out.println(random_index + "" +e.getText());
+	  
+	  // click on random link
 	  e.click();
-	  Thread.sleep(1500);
+	  
+	  
+	  // go back to home page
 	  driver.navigate().back();
 	  
 	  Thread.sleep(1500);
-	  footerList=driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
 	  
+	  // loading elements one again becuase after coming back from clicked link it may not find further element
+	  footerList=driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
+	  Thread.sleep(1500);
 	}
 }
 }
