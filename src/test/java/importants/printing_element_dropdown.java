@@ -43,16 +43,15 @@ public class printing_element_dropdown {
 			dropdownlist.add(e.getText());
 		}
 		
-		// Sorting the arrylist
-		ArrayList<String> templist=dropdownlist;
-		Collections.sort(templist);
+		
+		Collections.sort(dropdownlist);
 		
 		// Printing the sorted array
-		System.out.println(templist);
+		System.out.println(dropdownlist);
 		
 		
 		// Printing the sorted list
-		for(String list:templist)
+		for(String list:dropdownlist)
 		{
 			System.out.println(list);
 		}

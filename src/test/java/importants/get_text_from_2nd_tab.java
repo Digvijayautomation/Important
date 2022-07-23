@@ -30,14 +30,15 @@ public class get_text_from_2nd_tab
 		{
 			driver.get("https://google.com");
 			Thread.sleep(3000);
+			
 			driver.switchTo().newWindow(WindowType.TAB);
-
 			driver.navigate().to("https://www.facebook.com/");
 			Thread.sleep(3000);
-			driver.switchTo().newWindow(WindowType.TAB);
 			
+			driver.switchTo().newWindow(WindowType.TAB);
 			driver.navigate().to("https://msbte.gudexams.com/login");
 			Thread.sleep(3000);
+			
 			text = driver.findElement(By.tagName("body")).getText();
 			System.out.println(text);
 			Thread.sleep(3000);

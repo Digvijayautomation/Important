@@ -18,7 +18,7 @@ public class Change_browser_dimensions {
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		
-		driver.manage().window().setSize( new Dimension(400, 500) );
+		driver.manage().window().setSize( new Dimension(100, 500) );
 		driver.get("http://demo.guru99.com/test/guru99home/");
 
 		

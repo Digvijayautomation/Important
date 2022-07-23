@@ -38,7 +38,7 @@ public class waits {
 	public static void Implicit_Wait()  // Implicit wait applied for all the elements/events automatically after declaring
 	{
 
-		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);// it every event is not completed within 3 seconds it will through error
+		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);// if every event is not completed within 5 seconds it will through error
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
 		driver.findElement(By.linkText("Forgot your password?")).click();
 		Assert.assertTrue(driver.findElement(By.id("btnSearchValues")).isDisplayed());
@@ -56,7 +56,7 @@ public class waits {
 		WebDriverWait wait=new WebDriverWait(driver, 2); // IT WILL WAIT FOR 2 SECOND TO CHECK "Packages" element is is visible or not
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.linkText("Packages"))));
 		driver.findElement(By.linkText("Packages")).click();
-
+		driver.quit();
 	}
 	@Test(priority=2)
 	public static void Fluetwait() 
@@ -65,8 +65,8 @@ public class waits {
 		
 		
 		FluentWait<WebDriver> wait = new FluentWait<>(driver)
-				.withTimeout(Duration.ofSeconds(30))  // Totalally it will wait for 30 seconds
-				.pollingEvery(Duration.ofSeconds(10)) // After every 10 second it will check the link is enabled or not
+				.withTimeout(Duration.ofSeconds(40))  // Totalally it will wait for 30 seconds
+				.pollingEvery(Duration.ofSeconds(5)) // After every 10 second it will check the link is enabled or not
 				.ignoring(Exception.class);
 		
 		WebElement element = (WebElement) wait.until(new Function<WebDriver, WebElement>() 
@@ -75,7 +75,7 @@ public class waits {
             public WebElement apply(WebDriver arg0) {
             	
             	//Checking for hyperlink which is with marque tag
-                WebElement linkelement = driver.findElement(By.linkText("Suggestive Question bank Summer 2022."));
+                WebElement linkelement = driver.findElement(By.linkText("Suggestive Question Bank Summer 2022"));
                 if (linkelement.isEnabled()) {
                     System.out.println("Element is Found");
                 }
@@ -83,6 +83,8 @@ public class waits {
             }
         });
         element.click();
+        
+        driver.quit();
 
 		
 

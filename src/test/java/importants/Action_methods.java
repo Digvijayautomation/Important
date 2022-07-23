@@ -34,6 +34,7 @@ public class Action_methods {
 		JavascriptExecutor jv=(JavascriptExecutor)driver;
 		jv.executeScript("scroll(0,300)");
 		
+		Thread.sleep(2000);
 		
 		//Using Action class Method "Mouse Hover"
 		WebElement live= driver.findElement(By. cssSelector("div.product-cards-wrapper--click a[title='Live']"));
