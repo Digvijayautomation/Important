@@ -16,7 +16,6 @@ public class Action_methods {
 	{
 		
 		WebDriver driver;
-		
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		
