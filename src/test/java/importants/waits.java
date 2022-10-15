@@ -58,6 +58,8 @@ public class waits {
 		driver.findElement(By.linkText("Packages")).click();
 		driver.quit();
 	}
+	
+	
 	@Test(priority=2)
 	public static void Fluetwait() 
 	{

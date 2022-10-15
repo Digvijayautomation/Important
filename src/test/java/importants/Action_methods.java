@@ -35,10 +35,10 @@ public class Action_methods {
 		
 		Thread.sleep(2000);
 		
+		
 		//Using Action class Method "Mouse Hover"
 		WebElement live= driver.findElement(By. cssSelector("div.product-cards-wrapper--click a[title='Live']"));
 		action.moveToElement(live).build().perform();
-		
 		WebElement automate= driver.findElement(By.cssSelector("div.product-cards-wrapper--click a[title='App Automate']"));  
 		automate.click();
 		

@@ -24,7 +24,8 @@ public class Dynamic_table_handling {
 		
 		// First have to find and store number of rows in list
 	   java.util.List<WebElement> ele=	driver.findElements(By.xpath("//table[@id='customers']//tbody//tr"));
-		 System.out.println(ele.size() +"-Number of Rows");
+		 
+	   System.out.println(ele.size() +"-Number of Rows");
 		 
 		 
 		 
@@ -37,7 +38,12 @@ public class Dynamic_table_handling {
 			 {
 			 System.out.println(columns.get(num).getText());
 			 }
+			 
+			
 		 }
+		 
+		 
+		
 		 
 		 
 		 
