@@ -54,4 +54,11 @@ public class Amazon_Finding_Mobile_Model_Name {
 		
 	}
 
+	
+	static void click(WebDriver driver,By by) {
+		
+		driver.findElement(by).click();
+		
+		
+	}
 }
