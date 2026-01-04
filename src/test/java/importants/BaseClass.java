@@ -7,11 +7,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	
-	protected WebDriver driver;
+	protected static WebDriver driver;
 	protected static final String BASE_URL = "https://www.amazon.com";
 	protected static final int TIMEOUT = 10;
 	
@@ -21,7 +22,7 @@ public class BaseClass {
 	 */
 	@BeforeTest
 	@Parameters({"browser"})
-	public void setUp(String browser) {
+	public void setUp(@Optional("chrome") String browser) {
 		initializeBrowser(browser);
 		driver.manage().window().maximize();
 		driver.get(BASE_URL);

@@ -37,8 +37,8 @@ Thread.sleep(3000);
 
 		}
 
-	@AfterTest
-	public static void tearDown()
+    @AfterTest
+	public void tearDown()
 		{
 			driver.quit();
 		}

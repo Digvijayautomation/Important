@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="importants.waits">
+      <class name="importants.Dynamic_table_handling">
         <methods>
-          <include name="test"/>
-          <include name="Fluetwait"/>
+          <include name="Dymaic_table"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- importants.waits -->
+      </class> <!-- importants.Dynamic_table_handling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

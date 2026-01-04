@@ -2,6 +2,7 @@ package importants;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class Amazon_Finding_Mobile_Model_Name extends BaseClass {
