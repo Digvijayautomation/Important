@@ -25,11 +25,6 @@ public class Dynamic_Xpaths {
 		
 		driver=new ChromeDriver();
 		
-		driver.get("https://www.amazon.com/");
-		
-		driver.manage().window().maximize();
-		
-		
 		Thread.sleep(4000);
 		
 		
@@ -37,7 +32,7 @@ public class Dynamic_Xpaths {
 		
             
             
-            driver.close();
+
 
 
 	}

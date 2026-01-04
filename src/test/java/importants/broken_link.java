@@ -5,23 +5,14 @@ import java.net.URL;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public  class broken_link {
+public  class broken_link extends BaseClass {
           
-	public static void main(String[] args) 
+	@Test
+	public void testBrokenLinks() 
 	{
-		 WebDriver driver;
-
-		WebDriverManager.chromedriver().setup();
-      driver = new ChromeDriver();
-		
-		driver.manage().window().maximize();
 		
 		driver.get("http://www.google.co.in/");
 		

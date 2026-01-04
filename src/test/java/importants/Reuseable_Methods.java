@@ -1,40 +1,30 @@
 package importants;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class Reuseable_Methods {
-
-	static WebDriver driver;
+public class Reuseable_Methods extends BaseClass {
 
 	// overloaded click methods one which take by as argument and 2nd will take
 	// webelemnt as arguement
 
 	// Click method For By
-	static void click(By by) {
+	void click(By by) {
 		driver.findElement(by).click();
 	}
 
 	// Click method For Webelement
-	static void click(WebElement element) {
+	void click(WebElement element) {
 		element.click();
 	}
 
-	static void sendkeys(By by, String value) {
+	void sendkeys(By by, String value) {
 		driver.findElement(by).sendKeys(value);
 	}
 
-	public static void main(String[] args) throws InterruptedException {
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-
-		driver.manage().window().maximize();
-		driver.get("https://www.amazon.in/");
+	@Test
+	public void testReusableMethods() throws InterruptedException {
 
 		// Create varibale for each locator
 

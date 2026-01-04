@@ -2,8 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="1" name="Test">
+    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="importants.Action_methods"/>
       <class name="importants.FindElements_List"/>
+      <class name="importants.Change_browser_dimensions"/>
+      <class name="importants.Dynamic_table_handling"/>
+      <class name="importants.Iframes"/>
+      <class name="importants.waits"/>
+      <class name="importants.get_text_from_2nd_tab"/>
+      <class name="importants.List"/>
+      <class name="importants.mobile_browser"/>
+      <class name="importants.Dataprovider_testng"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

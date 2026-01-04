@@ -3,23 +3,12 @@ package importants;
 import java.util.HashMap;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
+public class Hashmap extends BaseClass {
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class Hashmap {
-
-	public static void main(String[] args) throws InterruptedException {
-
-
-		WebDriver driver;
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-
-		driver.manage().window().maximize();
+	@Test
+	public void testHashmap() throws InterruptedException {
 		
 		
 		driver.get("https://maharashtranursingcouncil.co.in/mnc/mnc_w17/outer.php?q=6");

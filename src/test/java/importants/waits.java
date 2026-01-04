@@ -5,49 +5,31 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class waits {
-
-
-	static WebDriver driver;
-
-
-	@BeforeMethod
-	public static void test() {
-
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
-	}
+public class waits extends BaseClass {
 
 
 
 	@SuppressWarnings("deprecation")
 	@Test(priority=0)
-	public static void Implicit_Wait()  // Implicit wait applied for all the elements/events automatically after declaring
+	public void Implicit_Wait()  // Implicit wait applied for all the elements/events automatically after declaring
 	{
 
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);// if every event is not completed within 5 seconds it will through error
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
+		driver.navigate().refresh();
 		driver.findElement(By.linkText("Forgot your password?")).click();
 		Assert.assertTrue(driver.findElement(By.id("btnSearchValues")).isDisplayed());
-
-		driver.quit();
 	}
 
 	@Test(priority=1)
-	public static void Explicit_Wait()
+	public void Explicit_Wait()
 	{	
 		driver.get("https://www.rentomojo.com/");
 		driver.findElement(By.linkText("Pune")).click();
@@ -56,12 +38,11 @@ public class waits {
 		WebDriverWait wait=new WebDriverWait(driver, 2); // IT WILL WAIT FOR 2 SECOND TO CHECK "Packages" element is is visible or not
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.linkText("Packages"))));
 		driver.findElement(By.linkText("Packages")).click();
-		driver.quit();
 	}
 	
 	
 	@Test(priority=2)
-	public static void Fluetwait() 
+	public void Fluetwait() 
 	{
 		driver.get("https://msbte.org.in/");
 		
@@ -85,8 +66,6 @@ public class waits {
             }
         });
         element.click();
-        
-        driver.quit();
 
 		
 

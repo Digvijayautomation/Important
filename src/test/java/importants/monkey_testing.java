@@ -4,39 +4,22 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class monkey_testing {
+public class monkey_testing extends BaseClass {
 	
 	// We try click the random footer links in amazon homepage
 	
-	public static void main(String[] args) throws InterruptedException
-	{
-		
-	WebDriver driver;	
-	WebDriverManager.chromedriver().setup();
-	
-		 driver=new ChromeDriver();
-	     driver.navigate().to("https://www.amazon.in/");
-		 driver.manage().window().maximize();
+	@Test
+	public void testMonkeyTesting() throws InterruptedException {
 		
 		//JavascriptExecutor js=(JavascriptExecutor)driver;
 		//js.executeScript("window.scrollBy(0,4300)", "");
 	Thread.sleep(2000);
 		
 		// Will store all the webelement in 
-	List<WebElement> footerList=driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
-		
-		int footer_count=footerList.size();
-	
+		List<WebElement> footerList=driver.findElements(By.cssSelector("div.navFooterVerticalRow li a"));
 		System.out.println("Total Links in Footer are "+footer_count);
 	
 		Random rand=new Random();

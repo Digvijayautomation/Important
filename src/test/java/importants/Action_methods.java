@@ -2,22 +2,15 @@ package importants;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class Action_methods {
+public class Action_methods extends BaseClass {
 	
-	
-	public static void main(String[] args) throws InterruptedException
+	@Test
+	public void testActionMethods() throws InterruptedException
 	{
-		
-		WebDriver driver;
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
 		
 		driver.get("https://www.browserstack.com/");
 		Thread.sleep(1000);

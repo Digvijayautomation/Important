@@ -3,33 +3,17 @@ package importants;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 // open three tabs and get title of 2nd tab
-public class get_text_from_2nd_tab
-{
-	static WebDriver driver;
-	static String text;
-
-	@BeforeTest
-	public static void initDriver()
-		{
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-		}
+public class get_text_from_2nd_tab extends BaseClass {
+	String text;
 
 	@Test
-	public static void GetTextFromWindow() throws InterruptedException
+	public void GetTextFromWindow() throws InterruptedException
 		{
-			driver.get("https://google.com");
-			Thread.sleep(3000);
+Thread.sleep(3000);
 			
 			driver.switchTo().newWindow(WindowType.TAB);
 			driver.navigate().to("https://www.facebook.com/");

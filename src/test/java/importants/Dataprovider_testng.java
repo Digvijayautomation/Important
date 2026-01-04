@@ -26,7 +26,7 @@ static WebDriver driver;
 	
 	
 	@Test(dataProvider ="data_for_login_test")
-	public static void login(String Username, String Password) throws InterruptedException {
+	public void login(String Username, String Password) throws InterruptedException {
 		
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
 		Thread.sleep(1000);
@@ -45,7 +45,7 @@ static WebDriver driver;
 	}
 	
 	@DataProvider(name="data_for_login_test")
-	public  Object[][] LogintestData() {
+	public Object[][] LogintestData() {
 		Object[][] logindata=new Object[2][2];
 		
 		logindata[0][0]="Admin";

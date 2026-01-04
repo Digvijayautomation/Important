@@ -4,26 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class printing_element_dropdown {
+public class printing_element_dropdown extends BaseClass {
 	
-	
-	
-	public static void main(String[] args) throws InterruptedException
-	{
-		
-		WebDriver driver;
-		
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
-		
+	@Test
+	public void testPrintingDropdown() throws InterruptedException {
 		driver.navigate().to("https://online.gudexams.com/adminLogin");
 	
 		Thread.sleep(1000);

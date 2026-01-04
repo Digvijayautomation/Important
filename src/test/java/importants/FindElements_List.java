@@ -3,26 +3,15 @@ package importants;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class FindElements_List {
-
-
-	static WebDriver driver;
+public class FindElements_List extends BaseClass {
 
 	@BeforeTest
-	public void Browser() throws InterruptedException {
-
-		WebDriverManager.chromedriver().setup();
-		this.driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.justdial.com/Bangalore/Bakeries");
+	public void setup() throws InterruptedException {
+		driver.navigate().to("https://www.justdial.com/Bangalore/Bakeries");
 		Thread.sleep(500);
 
 
